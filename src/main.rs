@@ -1,5 +1,5 @@
+use s_file::{run, Config};
 use std::{env, process};
-use s_file::{Config, run};
 
 fn main() {
     // let args: Vec<String> = env::args().collect();
@@ -12,11 +12,13 @@ fn main() {
         process::exit(1);
     });
 
-    println!("Searching for [{}] In file [{}]", config.query,config.file_path);
+    println!(
+        "Searching for [{}] In file [{}]",
+        config.query, config.file_path
+    );
 
     if let Err(e) = run(config) {
         eprintln!("application error {e}");
         process::exit(2);
     }
-
 }
