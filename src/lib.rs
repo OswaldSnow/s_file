@@ -59,7 +59,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 }
 
 // 从文件内容中搜索指定内容
-// 使用函数放回集合的好处是方便判断结果是否为空
+// 使用函数返回集合的好处是方便判断结果是否为空
 fn search(query: &str, contents: &str, ignore_case: bool) -> Vec<LineResult> {
     // let mut res_vec: Vec<LineResult> = vec![];
 
